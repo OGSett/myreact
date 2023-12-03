@@ -1,0 +1,219 @@
+:root {
+    --destination-desktop: url('./assets/destination/background-destination-desktop.jpg');
+    --destination-mobile: url('./assets/destination/background-destination-mobile.jpg');
+}
+
+* {
+    margin: 0;
+}
+
+.destination-style {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-image: var(--destination-desktop);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.pick-dest {
+    padding-left: 170px;
+    margin-top: 60px;
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+}
+
+.dest-contenent {
+    width: 100%;
+}
+
+.dataContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+.dest-image-container {
+    width: 50%;
+    
+}
+.dest-image-container img{
+    width: 50%;
+    padding:130px 0 0 220px;
+}
+
+
+.infoContainer {
+    width: 445px;
+    height: 472px;
+    /* gap: 24px; */
+    padding-top: 80px;
+    margin: 0 0 0 120px;
+}
+
+.chose-dest {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.planetBtn {
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+}
+
+.nameDest {
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding:50px 0 50px 0;
+}
+
+.about {
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    width: 444px;
+}
+
+.line-dest {
+    width: 444px;
+    height: 1px;
+    background-color: #D0D6F9;
+    margin: 30px 0 30px 0;
+}
+
+.distAndTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dist span, .time span {
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+    text-transform: uppercase;
+}
+.dist h2, .time h2 {
+    padding: 10px 0 10px 0;
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.planetBtn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .destination-style {
+        font-family: 'Barlow Condensed', sans-serif;
+        background-image: var(--destination-desktop);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        height: autobash;
+        width: 100%;
+    }
+
+    .dataContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .dest-image-container img {
+        width: 300px;
+        height: 300px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .infoContainer {
+        /* width: 573px; */
+        margin: 0;
+        padding: 20px 0 0 0;
+        height: auto;
+    }
+
+    .pick-dest {
+        padding: 0;
+        margin: 0;
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3.375px;
+        text-transform: uppercase;
+    }
+
+    .planetBtn{
+        color: #D0D6F9;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .chose-dest {
+        width: 285px;
+        height: 34px;
+        padding: 0 0 0 70px;
+    }
+
+    .nameDest {
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0;
+    }
+
+    .about {
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 175% */
+    }
+}
+
+

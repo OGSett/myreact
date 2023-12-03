@@ -1,0 +1,238 @@
+:root {
+    --crew-desktop: url('./assets/crew/background-crew-desktop.jpg');
+    --crew-mobile: url('./assets/crew/background-crew-mobile.jpg');
+}
+
+
+
+.crew-style, html{
+    font-family: 'Barlow Condensed', sans-serif;
+    background-image: var(--crew-desktop);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* height: 100%; */
+    /* max-height: fit-content; */
+}
+
+
+
+.crewComp {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-top: 150px; */
+    /* margin-left: 350px; */
+}
+
+.imgCrewSide img {
+    width: 568.072px;
+    height: 708px;
+    display: flex;
+    right: 10%;
+    bottom: 0;
+    top: 0;
+}
+
+
+.info-side {
+    display: flex;
+    flex-direction: column;
+    padding-left: 210px; 
+}
+
+.pick-crew {
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    padding: 80px 0 0 210px; 
+}
+
+.counter {
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    opacity: 0.25;
+}
+
+.rolefont {color: #FFF;
+    font-family: Bellefair;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    opacity: 0.5;
+    padding-bottom: 30px;
+}
+
+.namefont {
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-bottom: 45px;
+}
+
+.biofont {
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    max-width: 444px;
+    height: 128px;
+}
+
+.list-crew {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 132px;
+    height: 15px;
+    padding: 80px 0 0 0;
+}
+
+.crclCrew {
+    background-color: #D0D6F9;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.meetCrew {
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .crew-style{
+        font-family: 'Barlow Condensed', sans-serif;
+        background-image: var(--crew-mobile);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: auto;
+        
+    }
+
+    .counter {
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.375px;
+    }
+
+
+    .crewComp {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .pick-crew {
+        padding:20px 0 0 50px;
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3.375px;
+        text-transform: uppercase;
+    } 
+    .navContainer{
+        padding: 0;
+    }
+
+
+    .counter {
+        color: #FFF;
+        opacity: 0.25;
+        font-family: Barlow Condensed;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.375px;
+    }
+
+    .info-side {
+        padding: 50px 0 0 0;
+    }
+
+    .imgCrewSide {
+        display: flex;
+        top: 100%;
+        width: 456.372px;
+        height: 572px;
+        left: 5%;
+
+    }
+    
+    .imgCrewSide img{
+        width: 456.372px;
+        height: 572px;
+    }
+    
+    .rolefont {
+        font-size: 24px;
+        margin: 0
+    }
+
+    .namefont {
+        font-size: 40px;
+    }
+
+    .biofont {
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .bio-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 458px;
+        left: 15%;
+    }
+    
+    .meetCrew {
+        padding: 0;
+    }
+    
+    .list-crew {
+        margin: 0;
+        padding: 0 0 10px 150px;
+        
+    }
+
+    
+
+}

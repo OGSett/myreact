@@ -1,0 +1,202 @@
+:root {
+    --technology-desktop: url('./assets/technology/background-technology-desktop.jpg');
+    --technology-mobile: url('./assets/technology/background-technology-mobile.jpg');
+}
+
+.technology-style {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-image: var(--technology-desktop);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+  
+
+.tech-container {
+    width: 100%;
+    /* height: auto; */
+}
+
+.techComp {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.techImg {
+    position: relative;
+    width: 60%;
+}
+ .techImg img {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    width: 515px;
+    height: 527px;
+}
+
+.techInfo {
+    width: 50%;
+    display: flex;
+    margin: 150px 0 0 190px;
+}
+
+.bioTech {
+    padding: 0 0 0 80px;
+}
+.bioTech span {
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+}
+
+.techName {
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.biofont2 {
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    width: 444px;
+}
+
+.a {
+    position: relative;
+}
+
+.techLi span {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    bottom: 0;
+    right: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Bellefair;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* align-items: center; */
+    letter-spacing: 2px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .technology-style {
+        font-family: 'Barlow Condensed', sans-serif;
+        background-image: var(--technology-mobile);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        /* height: 100vh; */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        /* position: static; */
+    }
+
+    .techInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 315px 0 0 150px;
+        margin: 0;
+        /* position: absolute; */
+        z-index: 1;
+    }
+
+    .techImg img {
+        width: 768px;
+        height: 310px;
+    }
+
+    .techComp {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .choseTech {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
+    }
+
+    .bioTech span {
+        color: #D0D6F9;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+    .techName {
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        width: 457px;
+        padding: 20px 0 20px 0;
+    }
+
+    .biofont2 {
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .a {
+        display: flex;
+    }
+    
+    .a img{
+        position: relative;
+        width: 60px;
+        height: 60px;
+    }
+
+    .techLi span {
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.5px;
+        position: absolute;
+        left: 0;
+        top: 25%;
+        bottom: 0;
+        right: 0;
+    }
+}

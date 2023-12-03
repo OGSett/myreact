@@ -1,0 +1,171 @@
+:root {
+    --home-desktop: url('./assets/home/background-home-desktop.jpg');
+    --home-mobile: url('./assets/home/background-home-mobile.jpg');
+}
+
+.home-style {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-image: var(--home-desktop);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* width: 100vh; */
+    height: 100vh;
+}
+
+.navContainer{
+    padding-top: 50px;
+}
+
+
+.main-home {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.homeComp{
+    position: absolute;
+    right: 20%;
+    top: 0;
+    transform: translateY(100%);
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-mainText {
+    width: 445px;
+    height: 382px;
+    padding-right: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.home-mainText h3 {
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.725px;
+}
+
+.home-mainText h1 {
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.home-mainText p {
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.circ {
+    width: 274px;
+    height: 274px;
+    background-color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circ h1 {
+    color: #0B0D17;
+    font-family: Bellefair;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.circ:hover {
+    cursor: pointer;
+    box-shadow: #0B0D17;
+}
+
+@media screen and (max-width: 768px) {
+    .home-style {
+        font-family: 'Barlow Condensed', sans-serif;
+        background-image: var(--home-mobile);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        position: relative;
+        height: 1024px;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .homeComp {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        bottom: -100%;
+    }
+
+    .homeComp h3 {
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow Condensed;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3.375px;
+    }
+
+    .homeComp h1 {
+        color: #FFF;
+        font-family: Bellefair;
+        font-size: 150px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150px;
+    }
+
+    .homeComp p {
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .circ h1 {
+        color: #0B0D17;
+        font-family: Bellefair;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2px;
+    }
+
+    .circ {
+        margin-top: 260px;
+        width: 242px;
+        height: 242px;
+        flex-shrink: 0;
+    }
+}
