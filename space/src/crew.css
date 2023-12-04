@@ -37,6 +37,7 @@
 }
 
 
+
 .info-side {
     display: flex;
     flex-direction: column;
@@ -109,7 +110,16 @@
 }
 
 .crclCrew {
-    background-color: #D0D6F9;
+    background-color: gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.crewSelected {
+    background-color: #FFF;
     width: 15px;
     height: 15px;
     border-radius: 50%;

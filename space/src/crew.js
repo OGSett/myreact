@@ -10,8 +10,12 @@ import './crew.css'
 const Crew = ({ data, isLoading, error }) => {
 
     const [currentCrew, setCurrentCrew] = useState(null);
+    const [itsDougBtn , setItsDougBtn] = useState(true)
+    const [itsMarkBtn , setItsMarkBtn] = useState(false)
+    const [itsVictorBtn , setItsVictor] = useState(false)
+    const [itsAnuBtn , setItsAnuBtn] = useState(false)
     const [currentCrewImage, setCurrentCrewImage] = useState(crewImage1);
-
+    
     useEffect(() => {
         if (data && data.crew) {
             setCurrentCrew(data.crew[0]);
@@ -21,18 +25,34 @@ const Crew = ({ data, isLoading, error }) => {
     const ItsDOUG = () => {
         setCurrentCrew(data.crew[0]);
         setCurrentCrewImage(crewImage1);
+        setItsDougBtn(true);
+        setItsMarkBtn(false);
+        setItsVictor(false);
+        setItsAnuBtn(false);
     };
     const itsMark = () => {
         setCurrentCrew(data.crew[1]);
         setCurrentCrewImage(crewImage2);
+        setItsDougBtn(false);
+        setItsMarkBtn(true);
+        setItsVictor(false);
+        setItsAnuBtn(false);
     };
     const itsVictor = () => {
         setCurrentCrew(data.crew[2]);
         setCurrentCrewImage(crewImage3);
+        setItsDougBtn(false);
+        setItsMarkBtn(false);
+        setItsVictor(true);
+        setItsAnuBtn(false);
     };
     const itsAnousheh = () => {
         setCurrentCrew(data.crew[3]);
         setCurrentCrewImage(crewImage4);
+        setItsDougBtn(false);
+        setItsMarkBtn(false);
+        setItsVictor(false);
+        setItsAnuBtn(true);
     };
 
 
@@ -59,10 +79,10 @@ const Crew = ({ data, isLoading, error }) => {
                     </div>
                     <div className="list-crew">
                         {/* <img src={test} alt="" /> */}
-                        <button className="crclCrew" onClick={ItsDOUG}></button>
-                        <button className="crclCrew" onClick={itsMark}></button>
-                        <button className="crclCrew" onClick={itsVictor}></button>
-                        <button className="crclCrew" onClick={itsAnousheh}></button>
+                        <button className={` ${itsDougBtn ? "crewSelected" : "crclCrew"} `} onClick={ItsDOUG}></button>
+                        <button className={` ${itsMarkBtn ? "crewSelected" : "crclCrew"} `} onClick={itsMark}></button>
+                        <button className={` ${itsVictorBtn ? "crewSelected" : "crclCrew"} `} onClick={itsVictor}></button>
+                        <button className={` ${itsAnuBtn ? "crewSelected" : "crclCrew"} `} onClick={itsAnousheh}></button>
                     </div>           
                 </div>
                 <div className="imgCrewSide">
