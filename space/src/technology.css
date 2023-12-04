@@ -79,6 +79,16 @@
 .a {
     position: relative;
 }
+.aBlack {
+
+    color: black;
+}
+
+.aBlack img {
+    background-color: #FFF;
+    border-radius: 50%;
+    opacity: 0.1036;
+}
 
 .techLi span {
     position: absolute;

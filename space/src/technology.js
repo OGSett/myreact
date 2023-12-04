@@ -12,6 +12,9 @@ import NavBar from'./NavBar.js'
 const Thecnology = ({ data, isLoading, error }) => {
 
     const [currentTech, setCurrentTech] = useState(null);
+    const [launchUp, setLaunchUp] = useState(null);
+    const [spacePortUp, setSpacePortUp] = useState(null);
+    const [capsuleUp, setCapsuleUp] = useState(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const imgToPut = [techImgPort1, techImgPort2, techImgPort3];
     const imgMobToPut = [techImg1, techImg2, techImg3];
@@ -20,7 +23,6 @@ const Thecnology = ({ data, isLoading, error }) => {
     const updateDimensions = useCallback(() => {
         setWindowWidth(window.innerWidth);
     }, []);
-    
     
     useEffect(() => {
         window.addEventListener('resize', updateDimensions);
@@ -38,16 +40,25 @@ const Thecnology = ({ data, isLoading, error }) => {
     const handleLaunch = () => {
         setCurrentTech(data.technology[0]);
         setCurrentTechImage(windowWidth <= 768 ? imgMobToPut[0] : imgToPut[0]);
+        setLaunchUp(true);
+        setSpacePortUp(false);
+        setCapsuleUp(false);
     };
 
     const handleSpacePort = () => {
         setCurrentTech(data.technology[1]);
         setCurrentTechImage(windowWidth <= 768 ? imgMobToPut[1] : imgToPut[1]);
+        setLaunchUp(false);
+        setSpacePortUp(true);
+        setCapsuleUp(false);
     };
 
     const handleSpaceCapsule = () => {
         setCurrentTech(data.technology[2]);
         setCurrentTechImage(windowWidth <= 768 ? imgMobToPut[2] : imgToPut[2]);
+        setLaunchUp(false);
+        setSpacePortUp(false);
+        setCapsuleUp(true);
     };
 
     if (isLoading) return <div>Loading...</div>;
@@ -64,17 +75,17 @@ const Thecnology = ({ data, isLoading, error }) => {
             <div className="techComp">
                 <div className="techInfo">
                     <div className="choseTech">
-                        <div className="a"><img src={a} alt="" />
+                        <div className={`a ${launchUp ? "aBlack" : ""}`}><img src={a} alt="" />
                             <div className="techLi" onClick={handleLaunch}>
                                 <span>1</span>
                             </div>
                         </div>
-                        <div className="a"><img src={a} alt="" />
+                        <div className={`a ${spacePortUp ? "aBlack" : ""}`}><img src={a} alt="" />
                             <div className="techLi" onClick={handleSpacePort}>
                                 <span>2</span>
                             </div>
                         </div>
-                        <div className="a"><img src={a} alt="" />
+                        <div className={`a ${capsuleUp ? "aBlack" : ""}`}><img src={a} alt="" />
                             <div className="techLi" onClick={handleSpaceCapsule}>
                                 <span>3</span>
                             </div>
