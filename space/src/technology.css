@@ -79,6 +79,9 @@
 .a {
     position: relative;
 }
+.techLi:hover {
+    cursor: pointer;
+}
 .aBlack {
 
     color: black;

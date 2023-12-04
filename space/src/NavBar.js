@@ -15,7 +15,6 @@ const NavBar = () => {
 
     const toggleNav = () => {
         setIsNavExpanded(!isNavExpanded);
-        console.log(isNavExpanded);
     };
 
     const closeNav = () => {
@@ -25,28 +24,24 @@ const NavBar = () => {
     const location = useLocation();
     useEffect(()=> {
         if(location.pathname === "/home"){
-            console.log("yess")
             setIsNavHome(true)
             setIsNavDest(false)
             setIsNavCrew(false)
             setIsNavTech(false)
         }
         if(location.pathname === "/destination"){
-            console.log("yess")
             setIsNavHome(false)
             setIsNavDest(true)
             setIsNavCrew(false)
             setIsNavTech(false)
         }
         if(location.pathname === "/crew"){
-            console.log("yess")
             setIsNavHome(false)
             setIsNavDest(false)
             setIsNavCrew(true)
             setIsNavTech(false)
         }
         if(location.pathname === "/technology"){
-            console.log("yess")
             setIsNavHome(false)
             setIsNavDest(false)
             setIsNavCrew(false)

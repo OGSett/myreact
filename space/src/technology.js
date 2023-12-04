@@ -12,7 +12,7 @@ import NavBar from'./NavBar.js'
 const Thecnology = ({ data, isLoading, error }) => {
 
     const [currentTech, setCurrentTech] = useState(null);
-    const [launchUp, setLaunchUp] = useState(null);
+    const [launchUp, setLaunchUp] = useState(true);
     const [spacePortUp, setSpacePortUp] = useState(null);
     const [capsuleUp, setCapsuleUp] = useState(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
