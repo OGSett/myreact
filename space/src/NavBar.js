@@ -1,12 +1,17 @@
 import star from "./assets/shared/logo.svg"
 import { Link } from 'react-router-dom';
 import b from "./b.svg"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import close from "./close.svg"
 import './navbar.css'
+import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
+    const [isNavHome, setIsNavHome] = useState(true);
+    const [isNavDest, setIsNavDest] = useState(false);
+    const [isNavCrew, setIsNavCrew] = useState(false);
+    const [isNavTech, setIsNavTech] = useState(false);
 
     const toggleNav = () => {
         setIsNavExpanded(!isNavExpanded);
@@ -16,8 +21,41 @@ const NavBar = () => {
     const closeNav = () => {
         setIsNavExpanded(!isNavExpanded);
     };
+
+    const location = useLocation();
+    useEffect(()=> {
+        if(location.pathname === "/home"){
+            console.log("yess")
+            setIsNavHome(true)
+            setIsNavDest(false)
+            setIsNavCrew(false)
+            setIsNavTech(false)
+        }
+        if(location.pathname === "/destination"){
+            console.log("yess")
+            setIsNavHome(false)
+            setIsNavDest(true)
+            setIsNavCrew(false)
+            setIsNavTech(false)
+        }
+        if(location.pathname === "/crew"){
+            console.log("yess")
+            setIsNavHome(false)
+            setIsNavDest(false)
+            setIsNavCrew(true)
+            setIsNavTech(false)
+        }
+        if(location.pathname === "/technology"){
+            console.log("yess")
+            setIsNavHome(false)
+            setIsNavDest(false)
+            setIsNavCrew(false)
+            setIsNavTech(true)
+        }
+    },[location.pathname])
     
-    console.log(isNavExpanded);
+
+    
 
     return ( 
         <nav className="navBar-container">
@@ -28,10 +66,10 @@ const NavBar = () => {
             </div>
             <div className={`navDiv ${isNavExpanded ? "expanded" : ""}`}>
                 <img src={close} onClick={closeNav} alt="" />
-                <Link to="/home"><button className="navBtn"><span className="bedir isGone">00</span> HOME</button></Link>
-                <Link to="/destination"><button className="navBtn"><span className="bedir isGone">00</span> DESTINATION</button></Link>
-                <Link to="/crew"><button className="navBtn"><span className="bedir isGone">00</span> CREW</button></Link>
-                <Link to="/technology"><button className="navBtn"><span className="bedir isGone">00</span> TECHNOLOGY</button></Link>
+                <Link to="/home"><button className={`navBtn ${isNavHome ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> HOME</button></Link>
+                <Link to="/destination"><button className={`navBtn ${isNavDest ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> DESTINATION</button></Link>
+                <Link to="/crew"><button className={`navBtn ${isNavCrew ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> CREW</button></Link>
+                <Link to="/technology"><button className={`navBtn ${isNavTech ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> TECHNOLOGY</button></Link>
             </div>
         </nav>
      );

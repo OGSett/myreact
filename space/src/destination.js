@@ -33,6 +33,15 @@ const Destination = ({data, isLoading, error}) => {
         setCurrentDestinationImage(titanImg);
     };
 
+    function setActiveBtn(event) {
+        if (!event.currentTarget.classList.contains('activeBtn')) {
+                document.querySelectorAll('.planetBtn').forEach(btn => {
+                btn.classList.remove('activeBtn');
+            });
+            event.currentTarget.classList.add('activeBtn');
+        }
+    }
+
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
     if (!currentDestination) return <div>No destination data available.</div>;
@@ -51,10 +60,10 @@ const Destination = ({data, isLoading, error}) => {
                 <div className="infoContainer">
                     <div className="dest-holder">
                         <div className="chose-dest" >
-                            <div className="planetBtn" onClick={itsMoon}><h3>Moon</h3></div>
-                            <div className="planetBtn" onClick={itsMars}><h3>Mars</h3></div>
-                            <div className="planetBtn" onClick={itsEuropa}><h3>Europa</h3></div>
-                            <div className="planetBtn" onClick={itsTitan}><h3>Titan</h3></div>
+                            <div className="planetBtn activeBtn" onClick={(e) => { itsMoon(); setActiveBtn(e); }}><h3>Moon</h3></div>
+                            <div className="planetBtn" onClick={(e) => { itsMars(); setActiveBtn(e); }}><h3>Mars</h3></div>
+                            <div className="planetBtn" onClick={(e) => { itsEuropa(); setActiveBtn(e); }}><h3>Europa</h3></div>
+                            <div className="planetBtn" onClick={(e) => { itsTitan(); setActiveBtn(e); }}><h3>Titan</h3></div>
                         </div>
                         <h1 className="nameDest">{currentDestination.name}</h1>
                     </div>

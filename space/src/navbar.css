@@ -53,6 +53,7 @@
     background-color: transparent;
     outline: none;
     border: none;
+    height: 96px;
     }
     
     .bedir {
@@ -70,6 +71,10 @@
         align-items: center;
     }
     
+    .activeNavBtn {
+        border-bottom: 2px solid #FFF;
+        
+    }
     
     @media screen and (max-width: 768px) {
         .navBar-container {
