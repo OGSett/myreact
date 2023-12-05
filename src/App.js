@@ -1,11 +1,11 @@
-import { Route, Routes, useLocation, BrowserRouter as Router} from 'react-router-dom';
+import { Route, Routes, HashRouter, useLocation, BrowserRouter as Router} from 'react-router-dom';
 import { useEffect } from 'react';
 import Home from "./home"
 import Crew from "./crew"
 import Technology from "./technology"
 // import navbar from "./"
 import Destination from "./destination"
-import useFetch from './useFetch';
+import useFetch from './useFetch'
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
     };
 
   return (
-    <Router>
+    <Router basename="/myreact">
       <BodyStyleHandler />
       <Routes>
         <Route path='/' element={<Home data={data} isLoading={isLoading} error={error}/>}/>
