@@ -13,6 +13,30 @@ const NavBar = () => {
     const [isNavCrew, setIsNavCrew] = useState(false);
     const [isNavTech, setIsNavTech] = useState(false);
 
+    const checkNavSize = () => {
+        if (window.innerWidth <= 450)
+        {
+            setIsNavExpanded(true);
+        }
+        else
+        {
+            setIsNavExpanded(false);
+        }
+    };
+
+    useEffect(() => {
+        
+        checkNavSize();
+    
+        window.addEventListener('resize', checkNavSize);
+    
+        return () => {
+          window.removeEventListener('resize', checkNavSize);
+        };
+      }, []);
+
+      console.log(isNavExpanded)
+
     const toggleNav = () => {
         setIsNavExpanded(!isNavExpanded);
     };
@@ -56,10 +80,12 @@ const NavBar = () => {
         <nav className="navBar-container">
             <div className="leftside">
                 <Link to="/"><img className="logo" src={star} alt="/" /></Link>
-            <button className={`burger ${isNavExpanded ? "gone" : ""}`}><img src={b} onClick={toggleNav}  alt="/" /></button>
             <div className="line isGone"></div>
             </div>
-            <div className={`navDiv ${isNavExpanded ? "expanded" : ""}`}>
+            <div className="toggle-menu">
+                <button className={` ${isNavExpanded ? "gone" : "burger"}`}><img src={b} onClick={toggleNav}  alt="/" /></button>
+            </div>
+            <div className={` ${isNavExpanded ? "expanded" : "navDiv"}`}>
                 <img src={close} onClick={closeNav} alt="" />
                 <Link to="/home"><button className={`navBtn ${isNavHome ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> HOME</button></Link>
                 <Link to="/destination"><button className={`navBtn ${isNavDest ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> DESTINATION</button></Link>

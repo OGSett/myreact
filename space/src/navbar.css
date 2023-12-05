@@ -4,7 +4,7 @@
     background-color: transparent;
     }
     
-    .navDiv img, .burger {
+    .navDiv img,  .burger{
     display: none;
     }
     
@@ -87,6 +87,7 @@
         .isGone {
             display: none;
         }
+    
         .navBtn {
             color: #FFF;
             font-family: Barlow Condensed;
@@ -95,5 +96,56 @@
             font-weight: 400;
             line-height: normal;
             letter-spacing: 2.362px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+
+        /* .navBar-container {
+            
+        } */
+
+        .logo {
+            padding: 0;
+        }
+
+        .toggle-menu {
+            position: fixed;  
+            top: 33px; 
+            right: 35px; 
+            z-index: 1000;
+        }
+
+        .leftside {
+            display: flex;
+            justify-content: space-between;
+            /* width: 100%; */
+        }
+
+        .navContainer {
+            width: 254px;
+        }
+        .expanded {
+            display: none;
+        }
+
+        .navDiv {
+            display: flex;
+            flex-direction: column;
+            height: 767px;
+            justify-content: center;
+            padding-top: 300px;
+            z-index: 1;
+            width: 254px;
+            position: fixed;
+            right: 10px;
+        }
+        .gone {
+            background-color: transparent;
+            border: none;
+        }
+        .navDiv img {
+            display: flex;
+            z-index: 1;
         }
     }
