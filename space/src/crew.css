@@ -11,7 +11,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    /* height: 100%; */
+    width: 100%;
     /* max-height: fit-content; */
 }
 
@@ -242,7 +242,119 @@
         padding: 0 0 10px 150px;
         
     }
+}
 
-    
+@media screen and (max-width: 450px) {
+    .crew-style{
+        font-family: 'Barlow Condensed', sans-serif;
+        background-image: var(--crew-mobile);
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* width: 375px;
+        height: 710px; */
+    }
+    .pick-crew {
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+    }
+
+    .crew-container {
+        height: 710px;
+    }
+
+    .counter {
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+    .imgCrewSide img {
+        width: 217.123px;
+        height: 272px;
+        flex-shrink: 0;
+    }
+    .imgCrewSide{
+        width: 177.123px;
+        height: 222px;
+        flex-shrink: 0;
+    }
+
+    .crewComp {
+        flex-direction: column-reverse;
+        height: 600px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .info-side {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .crclCrew {
+        width: 7px;
+        height: 7px;
+    }
+    .crewSelected {
+        width: 9px;
+        height: 9px;
+    }
+    .list-crew {
+        width: 88px;
+        height: 10px;
+        padding: 10px 0 30px 115px;
+    }
+
+    .rolefont {
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .namefont {
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 0 0 20px   ;
+    }
+
+    .biofont {
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        width: 327px;
+    }
+
+    .bio-card {
+        width: 327px;
+    }
+
+    .navContainer {
+        height: 80px;
+    }
 
 }

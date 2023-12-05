@@ -107,6 +107,8 @@
 
         .logo {
             padding: 0;
+            width: 40px;
+            height: 40px;
         }
 
         .toggle-menu {
@@ -134,11 +136,12 @@
             flex-direction: column;
             height: 767px;
             justify-content: center;
+            align-items: flex-start;
             padding-top: 300px;
             z-index: 1;
             width: 254px;
             position: fixed;
-            right: 10px;
+            right: 0;
         }
         .gone {
             background-color: transparent;
@@ -147,5 +150,32 @@
         .navDiv img {
             display: flex;
             z-index: 1;
+        }
+
+        .navBtn {
+            height: 40px;
+            
+        }
+
+        .closeImg {
+            position: fixed;
+            right: 5px;
+            top: 48%;
+            width: 19px;
+            height: 19px;
+            /* transform: translateX(100%); */
+        }
+
+        .activeNavBtn {
+            border-bottom: none;
+        }
+
+        .navBtn {
+            /* padding-left: 60px; */
+        }
+        
+        .bedir {
+            padding-left: 30px;
+
         }
     }

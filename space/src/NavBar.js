@@ -86,11 +86,11 @@ const NavBar = () => {
                 <button className={` ${isNavExpanded ? "gone" : "burger"}`}><img src={b} onClick={toggleNav}  alt="/" /></button>
             </div>
             <div className={` ${isNavExpanded ? "expanded" : "navDiv"}`}>
-                <img src={close} onClick={closeNav} alt="" />
-                <Link to="/home"><button className={`navBtn ${isNavHome ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> HOME</button></Link>
-                <Link to="/destination"><button className={`navBtn ${isNavDest ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> DESTINATION</button></Link>
-                <Link to="/crew"><button className={`navBtn ${isNavCrew ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> CREW</button></Link>
-                <Link to="/technology"><button className={`navBtn ${isNavTech ? "activeNavBtn" : ""}`} ><span className="bedir isGone">00</span> TECHNOLOGY</button></Link>
+                <img className="closeImg" src={close} onClick={closeNav} alt="" />
+                <Link to="/home"><button className={`navBtn ${isNavHome ? "activeNavBtn" : ""}`} ><span className="bedir ">00</span> HOME</button></Link>
+                <Link to="/destination"><button className={`navBtn ${isNavDest ? "activeNavBtn" : ""}`} ><span className="bedir ">01</span> DESTINATION</button></Link>
+                <Link to="/crew"><button className={`navBtn ${isNavCrew ? "activeNavBtn" : ""}`} ><span className="bedir ">02</span> CREW</button></Link>
+                <Link to="/technology"><button className={`navBtn ${isNavTech ? "activeNavBtn" : ""}`} ><span className="bedir ">03</span> TECHNOLOGY</button></Link>
             </div>
         </nav>
      );
